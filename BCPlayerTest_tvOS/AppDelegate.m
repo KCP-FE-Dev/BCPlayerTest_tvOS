@@ -20,7 +20,6 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
-    
     //BrightCove Player
     NSString *customerToken = @"tDlwutBf4Xu8mfUPH7RFNRxCvuuwyZ92SLHVPZZ5U6VTMT66";// @"9nBB2Boc5PKDMhRUcs87gr8yXDEE761FYLv8HExwUs1UfnjY";
     [Kcp loginWithToken:customerToken completion:^(NSError * _Nullable error) {
