@@ -6,12 +6,10 @@
 //  Copyright © 2020 신승환. All rights reserved.
 //
 
+@import KCPSDK;
 #import <BrightcoveIMA/BrightcoveIMA.h>
 #import <GoogleInteractiveMediaAds/GoogleInteractiveMediaAds.h>
-
 #import "ViewController.h"
-
-@import KCPSDK;
 
 @interface ViewController () <KCPBCOVTVPlayerViewDelegate, BCOVPlaybackControllerDelegate, PlaybackRateTabBarItemViewDelegate, IMAWebOpenerDelegate>
 
@@ -42,10 +40,10 @@
                                               [_playerView.leftAnchor constraintEqualToAnchor:_videoContainerView.leftAnchor],
                                               [_playerView.bottomAnchor constraintEqualToAnchor:_videoContainerView.bottomAnchor]]];
        
-    [_playerView setDelegate:self];
+    _playerView.playerDelegate = self;
        
     _playbackService = [Kcp getPlaybackService];
-    [_playbackService findVideoWithVideoID:@"6167057370001"
+    [_playbackService findVideoWithVideoID:@"6155071135001"
                                 parameters:nil
                                 completion:^(BCOVVideo *video, NSDictionary *jsonResponse, NSError *error) {
         if (error)
@@ -92,9 +90,6 @@
                                      completion:^(BOOL success, BCOVVideo * _Nullable video, NSArray<BCOVVideo *> * _Nullable arrVidoes, NSError * _Nullable error) {
         if (success)
         {
-//            [self.playerView setTitle:[video getName]];
-
-            [self.playerView setVideos:arrVidoes];
             [self.playbackController setVideos:arrVidoes];
         }
         else
@@ -152,7 +147,7 @@
 - (void)playbackController:(id<BCOVPlaybackController>)controller
 didAdvanceToPlaybackSession:(id<BCOVPlaybackSession>)session
 {
-    NSLog("ViewController Debug - Advanced to new session.")
+    NSLog(@"ViewController Debug - Advanced to new session.");
 }
 
 - (void)playbackController:(id<BCOVPlaybackController>)controller

@@ -1,7 +1,7 @@
 PODS:
-  - Apollo (0.29.0):
-    - Apollo/Core (= 0.29.0)
-  - Apollo/Core (0.29.0)
+  - Apollo (0.29.1):
+    - Apollo/Core (= 0.29.1)
+  - Apollo/Core (0.29.1)
   - Brightcove-Player-Core (6.7.9)
   - Brightcove-Player-IMA (6.7.9):
     - Brightcove-Player-Core (= 6.7.9)
@@ -9,7 +9,7 @@ PODS:
     - GoogleAds-IMA-tvOS-SDK (= 4.2.3)
   - GoogleAds-IMA-tvOS-SDK (4.2.3)
   - JWTDecode (2.4.1)
-  - KCPSDK (1.0.2):
+  - KCPSDK (1.0.3):
     - Apollo
     - Brightcove-Player-Core
     - Brightcove-Player-GoogleCast
@@ -28,7 +28,7 @@ SPEC REPOS:
   https://github.com/brightcove/BrightcoveSpecs.git:
     - Brightcove-Player-Core
     - Brightcove-Player-IMA
-  https://github.com/BrightcovePS/KCP-Player-Specs.git:
+  https://github.com/BrightcovePS/KCP-Player-Specs:
     - KCPSDK
   https://github.com/CocoaPods/Specs.git:
     - Apollo
@@ -37,14 +37,14 @@ SPEC REPOS:
     - SDWebImage
 
 SPEC CHECKSUMS:
-  Apollo: 38f766f29f787682394519673c8dba5d94035668
+  Apollo: 721f2cf55203ae9d1fec9047ff27dec8274afd7d
   Brightcove-Player-Core: a275c1278c9ae739c8e5f612d51c7f60ac5f137c
   Brightcove-Player-IMA: a91c4d747d7dcac5161ad486d805e86b18f3182c
   GoogleAds-IMA-tvOS-SDK: 98680b2407d6d13e048d952780d0eb835880c689
   JWTDecode: 4bd4da0cdf0f8154fd467fa48499f34ec057fb88
-  KCPSDK: 254f8d8ef94521b2c51d2529ad5da698e619939f
+  KCPSDK: ee2d2bf2240d8b96acb1dffc1309bda5defc580f
   SDWebImage: 112503ec94a5a2a41869503844a15e8d8f1ead5c
 
 PODFILE CHECKSUM: fdc044dccf6a01a2de1e687dad99d24c9b616fe1
 
-COCOAPODS: 1.9.1
+COCOAPODS: 1.9.0
